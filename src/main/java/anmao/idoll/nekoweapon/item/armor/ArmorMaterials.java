@@ -1,15 +1,11 @@
 package anmao.idoll.nekoweapon.item.armor;
 
 import anmao.idoll.nekoweapon.NekoWeapon;
-import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
-import java.util.EnumMap;
 import java.util.function.Supplier;
 
 public class ArmorMaterials implements ArmorMaterial {

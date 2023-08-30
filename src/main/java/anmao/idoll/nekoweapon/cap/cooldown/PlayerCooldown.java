@@ -1,65 +1,52 @@
 package anmao.idoll.nekoweapon.cap.cooldown;
 
-import anmao.idoll.nekoweapon.Config;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.item.Item;
 
-import java.util.Arrays;
+import java.lang.reflect.Type;
+import java.util.HashMap;
 
 public class PlayerCooldown {
     private static final String KEY = "PlayerItemCD";
-    private static final String KEY_TIME = "PlayerItemTime";
-    private final int itemNum = 1;
-    private int[] itemCD = {
-            0,//Adaptive Armor
-            0
+    private static final String[] KEYS ={
+            "AdaptiveArmorCD",
+            "AdaptiveArmorTime",
+            "NaturalArmorCD",
+            "WarlordArmorCD"
     };
-    private final int itemTimeNum = 1;
-    private int[] itemTime = {
-            0,//Adaptive Armor
-            0
-    };
+    private final Gson gson = new Gson();
+    private HashMap<String, Integer> data = new HashMap<>();
+    public PlayerCooldown(){
+        for (String a:KEYS) {
+            data.put(a, 0);
+        }
+    }
 
-    public void setCD(int index,int time) {
-        this.itemCD[index] = time;
+    public void setData(String key,int time) {
+        this.data.put(key,time);
     }
-    public void setTime(int index,int time){this.itemTime[index] = time;}
-    public boolean isCD(int index){
-        return itemCD[index] > 0;
+    public boolean isData(String key){
+        return this.data.get(key)> 0;
     }
-    public boolean isTime(int index){return itemTime[index]>0;}
     public void subCD(){
-        for (int i = 0; i < this.itemNum;i++){
-            if (this.itemCD[i] > 0 ){
-                this.itemCD[i] --;
+        this.data.forEach((key,value)->{
+            if (value > 0) {
+                this.data.put(key, value - 1);
             }
-        }
-        for (int i = 0; i < this.itemTimeNum;i++){
-            if (this.itemTime[i] > 0 ){
-                this.itemTime[i] --;
-            }
-        }
+        });
     }
     public void copyFrom(PlayerCooldown source){
-        this.itemTime = source.itemTime;
-        this.itemCD = source.itemCD;
+        this.data = source.data;
     }
-    public int getTest(){
-        return itemCD[0];
-    }
-
-
-
-
-
     public void saveNBTData(CompoundTag nbt)
     {
-        nbt.putIntArray(KEY_TIME,itemTime);
-        nbt.putIntArray(KEY,itemCD);
+        nbt.putString(KEY,gson.toJson(this.data));
     }
     public void loadNBTData(CompoundTag nbt)
     {
-        itemTime = nbt.getIntArray(KEY_TIME);
-        itemCD = nbt.getIntArray(KEY);
+        String s = nbt.getString(KEY);
+        Type type = new TypeToken<HashMap<String, Integer>>(){}.getType();
+        this.data = gson.fromJson(s, type);
     }
 }

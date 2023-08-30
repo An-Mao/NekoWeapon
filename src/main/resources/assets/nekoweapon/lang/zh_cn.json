@@ -29,9 +29,9 @@
 
 
   "item.nekoweapon.adaptive_armor": "适应胸甲",
-  "tooltip.nekoweapon.adaptive_armor.tooltip0": "免疫来源为自身的伤害。",
-  "tooltip.nekoweapon.adaptive_armor.tooltip1": "受到的其他伤害不会超过当前生命值的35%，最低减至3点，濒死时获得30s无敌，期间不会死亡，冷却160秒。",
-  "tooltip.nekoweapon.adaptive_armor.tooltip2": "冷却时技能失效。",
+  "tooltip.nekoweapon.adaptive_armor.tooltip0": "免疫来源为自身的伤害。受到的其他伤害不会超过当前生命值的35%，最低减至3点。",
+  "tooltip.nekoweapon.adaptive_armor.tooltip1": "濒死时获得30s无敌，受到的伤害转化为生命值，期间不会死亡，冷却150秒。",
+  "tooltip.nekoweapon.adaptive_armor.tooltip2": "冷却时上述技能全部失效。",
 
   "item.nekoweapon.natural_armor": "自然胸甲",
   "tooltip.nekoweapon.natural_armor.tooltip0": "提高10点生命值，生命值会缓慢恢复。",

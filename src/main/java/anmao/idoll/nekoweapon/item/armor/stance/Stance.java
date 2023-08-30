@@ -1,8 +1,10 @@
 package anmao.idoll.nekoweapon.item.armor.stance;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterials;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 

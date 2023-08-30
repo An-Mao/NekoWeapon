@@ -1,12 +1,10 @@
 package anmao.idoll.nekoweapon.item.armor.stance;
 
 import anmao.idoll.nekoweapon.NekoWeapon;
+import anmao.idoll.nekoweapon.am._AM;
 import anmao.idoll.nekoweapon.item.Weapon;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -19,7 +17,7 @@ public class StanceEvent {
         @SubscribeEvent
         public static void onHurt(LivingHurtEvent event){
             if (event.getEntity() instanceof ServerPlayer serverPlayer){
-                ItemStack item =  serverPlayer.getSlot(EquipmentSlot.CHEST.getIndex()).get();
+                ItemStack item =  serverPlayer.getSlot(_AM.CHEST_SLOT).get();
                 if (item.getItem() == Weapon.STANCE_ARMOR.get()){
                     if (event.getSource().getEntity() != null) {
                         double dis = serverPlayer.getEyePosition().distanceTo(event.getSource().getEntity().getEyePosition());
