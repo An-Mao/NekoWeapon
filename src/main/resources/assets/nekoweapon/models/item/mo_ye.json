@@ -1,0 +1,6 @@
+{
+  "parent": "nekoweapon:item/gan_jiang",
+  "textures": {
+    "layer0": "nekoweapon:item/gan_jiang"
+  }
+}

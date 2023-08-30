@@ -13,8 +13,8 @@ import net.minecraftforge.common.TierSortingRegistry;
 import java.util.List;
 
 public class ItemTiers {
-    public static final Tier SWORD_OF_JUDGMENT = TierSortingRegistry.registerTier(
-            new ForgeTier(9,9999,9,9,99, Tags.Blocks.NEEDS_NETHERITE_TOOL, ()->Ingredient.EMPTY),
+    public static final Tier SWORD = TierSortingRegistry.registerTier(
+            new ForgeTier(9,9999,9,1,99, Tags.Blocks.NEEDS_NETHERITE_TOOL, ()->Ingredient.EMPTY),
             new ResourceLocation(NekoWeapon.MODID,"sowrd_of_judgment"), List.of(Tiers.NETHERITE),List.of()
     );
 }

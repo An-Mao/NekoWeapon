@@ -1,0 +1,51 @@
+{
+  "creativetab.neko_weapon_tab": "Neko Weapon",
+  "item.nekoweapon.sword_of_judgment": "裁决之剑",
+  "tooltip.nekoweapon.sword_of_judgment.tooltip0": "如果目标生命值小于2倍武器伤害则直接处决。",
+
+  "item.nekoweapon.angel_sword": "天使之剑",
+  "tooltip.nekoweapon.angel_sword.tooltip0": "附带魔法伤害，若目标为敌对生物，则额外增加50%",
+
+  "item.nekoweapon.gan_jiang": "干将",
+  "tooltip.nekoweapon.gan_jiang.tooltip0": "如果副手持有【莫邪】，则有概率触发秒杀。",
+
+  "item.nekoweapon.mo_ye": "莫邪",
+  "tooltip.nekoweapon.mo_ye.tooltip0": "如果副手持有【干将】，则有概率触发秒杀。",
+
+  "item.nekoweapon.death_sickle": "死神之镰",
+  "tooltip.nekoweapon.death_sickle.tooltip0": "对村民追加额外伤害",
+
+  "item.nekoweapon.cross": "十字架",
+  "tooltip.nekoweapon.cross.tooltip0": "对蝙蝠额外造成100倍伤害。",
+
+  "item.nekoweapon.zen_stick": "禅杖",
+  "tooltip.nekoweapon.zen_stick.tooltip0": "对非不死生物，施加【言灵】效果。",
+  "tooltip.nekoweapon.zen_stick.tooltip1": "对不死生物，施加【超度】效果。",
+
+  "item.nekoweapon.mahogany_sword": "桃木剑",
+  "tooltip.nekoweapon.mahogany_sword.tooltip0": "当副手持有【黄符】时，可对僵尸造成额外伤害",
+  "item.nekoweapon.yellow_fu": "黄符",
+
+
+
+  "item.nekoweapon.adaptive_armor": "适应胸甲",
+  "tooltip.nekoweapon.adaptive_armor.tooltip0": "免疫来源为自身的伤害。",
+  "tooltip.nekoweapon.adaptive_armor.tooltip1": "受到的其他伤害不会超过当前生命值的35%，最低减至3点，濒死时获得30s无敌，期间不会死亡，冷却160秒。",
+  "tooltip.nekoweapon.adaptive_armor.tooltip2": "冷却时技能失效。",
+
+  "item.nekoweapon.natural_armor": "自然胸甲",
+  "tooltip.nekoweapon.natural_armor.tooltip0": "提高10点生命值，生命值会缓慢恢复。",
+
+  "item.nekoweapon.red_lotus_armor": "红莲胸甲",
+  "tooltip.nekoweapon.red_lotus_armor.tooltip0": "对攻击者施加火焰伤害。并附加业火效果。",
+  "tooltip.nekoweapon.red_lotus_armor.tooltip1": "攻击存在业火状态的目标可修补自身",
+
+  "item.nekoweapon.stance_armor": "立场胸甲",
+  "tooltip.nekoweapon.stance_armor.tooltip0": "降低80%自身触及距离外的伤害。",
+  "tooltip.nekoweapon.stance_armor.tooltip1": "增加70%触及距离内的伤害。",
+
+  "item.nekoweapon.warlord_armor": "战神胸甲",
+  "tooltip.nekoweapon.warlord_armor.tooltip0": "受到的伤害提升30%。",
+  "tooltip.nekoweapon.warlord_armor.tooltip1": "生命值越低，伤害越高。最高提高75%伤害。",
+  "tooltip.nekoweapon.warlord_armor.tooltip2": "生命值满时不会被秒杀，会降低至3点血量，并免疫此次死亡，冷却100秒。"
+}

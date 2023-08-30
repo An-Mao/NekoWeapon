@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.List;
 import java.util.Set;
@@ -19,29 +20,34 @@ public class Config
 {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
-    private static final ForgeConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER
-            .comment("Whether to log the dirt block on common setup")
-            .define("logDirtBlock", true);
+    private static final ForgeConfigSpec.IntValue GANJIANG_MOYE_SP = BUILDER
+            .comment("GanJiang/MoYe Spike Probability")
+            .defineInRange("ganjiang_moye_sp", 5, 0, 100);
+    private static final ForgeConfigSpec.IntValue VILLAGE_ADD_DAMAGE = BUILDER
+            .comment("Village Additional damage")
+            .defineInRange("village_add_damage", 99, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.DoubleValue ADAPTIVE_ARMOR_RR = BUILDER
+            .comment("adaptive armor reduction ratio")
+            .defineInRange("adaptive_armor_rr", 0.35, 0, 1.0);
 
-    private static final ForgeConfigSpec.IntValue MAGIC_NUMBER = BUILDER
-            .comment("A magic number")
-            .defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);
-
-    public static final ForgeConfigSpec.ConfigValue<String> MAGIC_NUMBER_INTRODUCTION = BUILDER
-            .comment("What you want the introduction message to be for the magic number")
-            .define("magicNumberIntroduction", "The magic number is... ");
-
-    // a list of strings that are treated as resource locations for items
-    private static final ForgeConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
-            .comment("A list of items to log on common setup.")
-            .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), Config::validateItemName);
-
+    private static final ForgeConfigSpec.IntValue ADAPTIVE_ARMOR_SPAN = BUILDER
+            .comment("adaptive armor span (s*10)")
+            .defineInRange("adaptive_armor_span", 600, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue ADAPTIVE_ARMOR_COOLDOWN = BUILDER
+            .comment("adaptive armor cooldown (tick)")
+            .defineInRange("adaptive_armor_cooldown", 3000, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue ADAPTIVE_ARMOR_MIN_DAMAGE = BUILDER
+            .comment("adaptive armor min damage")
+            .defineInRange("adaptive_armor_min_damage", 3, 0, Integer.MAX_VALUE);
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
-    public static boolean logDirtBlock;
-    public static int magicNumber;
-    public static String magicNumberIntroduction;
-    public static Set<Item> items;
+    public static int gangjiang_moye_sp;
+    public static int village_add_damage;
+
+    public static float adaptive_armor_rr;
+    public static int adaptive_armor_span;
+    public static int adaptive_armor_cooldown;
+    public static int adaptive_armor_min_damage;
 
     private static boolean validateItemName(final Object obj)
     {
@@ -51,13 +57,11 @@ public class Config
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)
     {
-        logDirtBlock = LOG_DIRT_BLOCK.get();
-        magicNumber = MAGIC_NUMBER.get();
-        magicNumberIntroduction = MAGIC_NUMBER_INTRODUCTION.get();
-
-        // convert the list of strings into a set of items
-        items = ITEM_STRINGS.get().stream()
-                .map(itemName -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemName)))
-                .collect(Collectors.toSet());
+        gangjiang_moye_sp = GANJIANG_MOYE_SP.get();
+        village_add_damage = VILLAGE_ADD_DAMAGE.get();
+        adaptive_armor_rr = ADAPTIVE_ARMOR_RR.get().floatValue();
+        adaptive_armor_span = ADAPTIVE_ARMOR_SPAN.get();
+        adaptive_armor_cooldown = ADAPTIVE_ARMOR_COOLDOWN.get();
+        adaptive_armor_min_damage = ADAPTIVE_ARMOR_MIN_DAMAGE.get();
     }
 }

@@ -1,4 +1,51 @@
 {
+  "creativetab.neko_weapon_tab": "Neko Weapon",
   "item.nekoweapon.sword_of_judgment": "Sword Of Judgment",
-  "tooltip.nekoweapon.sword_of_judgment.tooltip0": "a sword"
+  "tooltip.nekoweapon.sword_of_judgment.tooltip0": "If the target's health is less than twice the attack power of the weapon, it will be executed directly.",
+
+
+  "item.nekoweapon.angel_sword": "Angel Sword",
+  "tooltip.nekoweapon.angel_sword.tooltip0": "Collateral magic damage.",
+
+  "item.nekoweapon.gan_jiang": "Gan Jiang",
+  "tooltip.nekoweapon.gan_jiang.tooltip0": "Probability of killing the target in seconds when holding [Mo Ye] in the secondary hand",
+
+  "item.nekoweapon.mo_ye": "Mo Ye",
+  "tooltip.nekoweapon.mo_ye.tooltip0": "Probability of killing the target in seconds when holding [Gan Jiang] in the secondary hand",
+
+  "item.nekoweapon.death_sickle": "Death's Sickle",
+  "tooltip.nekoweapon.death_sickle.tooltip0": "Additional damage to villagers",
+
+  "item.nekoweapon.cross": "Cross",
+  "tooltip.nekoweapon.cross.tooltip0": "Deals 100x damage to bats",
+
+  "item.nekoweapon.zen_stick": "Zen Stick",
+  "tooltip.nekoweapon.zen_stick.tooltip0": "Apply [Yan Ling] effect to non-undead creatures.",
+  "tooltip.nekoweapon.zen_stick.tooltip1": "Apply [Chao Du] effect to undead creatures",
+
+  "item.nekoweapon.mahogany_sword": "Mahogany Sword",
+  "tooltip.nekoweapon.mahogany_sword.tooltip0": "If you have a [Yellow Fu] in your secondary hand, you can deal extra damage to zombies.",
+  "item.nekoweapon.yellow_fu": "Yellow Fu",
+
+
+  "item.nekoweapon.adaptive_armor": "Adaptive Armor",
+  "tooltip.nekoweapon.adaptive_armor.tooltip0": "immune to damage whose source is itself.",
+  "tooltip.nekoweapon.adaptive_armor.tooltip1": "No other damage taken will exceed 35% of current life value, reduced to a minimum of 3 points, gains 30s invulnerability on near-death, will not die during that time, cooldown 160 seconds.",
+  "tooltip.nekoweapon.adaptive_armor.tooltip2": "Skills expire on cooldown.",
+
+  "item.nekoweapon.natural_armor": "Natural Armor",
+  "tooltip.nekoweapon.natural_armor.tooltip0": "Increases lifesteal by 10 points, and lifesteal is slowly restored.",
+
+  "item.nekoweapon.red_lotus_armor": "Red Lotus Armor",
+  "tooltip.nekoweapon.red_lotus_armor.tooltip0": "Applies out damage to the attacker. It also attaches a Karma Fire effect. ",
+  "tooltip.nekoweapon.red_lotus_armor.tooltip1": "Attacking a target with a Karma Fire status mends itself.",
+
+  "item.nekoweapon.stance_armor": "Stance Armor",
+  "tooltip.nekoweapon.stance_armor.tooltip0": "Reduces damage outside of your own touch distance by 80%.",
+  "tooltip.nekoweapon.stance_armor.tooltip1": "Increases damage within touch distance by 70%.",
+
+  "item.nekoweapon.warlord_armor": "Warlord Armor",
+  "tooltip.nekoweapon.warlord_armor.tooltip0": "Damage taken is increased by 30%.",
+  "tooltip.nekoweapon.warlord_armor.tooltip1": "The lower the lifesteal, the higher the damage. Increases damage by up to 75%.",
+  "tooltip.nekoweapon.warlord_armor.tooltip2": "Will not be spiked when full of life, will be reduced to 3 points of blood and immune to this death with a cooldown of 100 seconds."
 }
